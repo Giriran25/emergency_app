@@ -1,6 +1,3 @@
-<p align="center">
-  <img src="assets/logo.png" width="220" alt="SERO Logo">
-</p>
 # 🚑 SERO — Smart Emergency Response Orchestrator
 
 <p align="center">
