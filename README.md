@@ -1,279 +1,454 @@
-🚑 SERO
-<div align="center"> <img src="assets/logo.png" width="170"/>
-Smart Emergency Response Orchestrator
-AI-Powered Emergency Response Platform
-Connecting Citizens • Ambulance Drivers • Traffic Controllers • Hospitals • Administrators
+# 🚑 SERO — Smart Emergency Response Orchestrator
 
+<p align="center">
+  <b>An AI-powered emergency response platform that intelligently connects citizens, ambulance drivers, hospitals, traffic authorities, and administrators into one coordinated emergency ecosystem.</b>
+</p>
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Flutter-3.x-blue?logo=flutter">
+  <img src="https://img.shields.io/badge/Firebase-Backend-orange?logo=firebase">
+  <img src="https://img.shields.io/badge/Google%20Maps-Location-green?logo=googlemaps">
+  <img src="https://img.shields.io/badge/License-MIT-success">
+  <img src="https://img.shields.io/badge/Hackathon-HCF%20Mark%201-red">
+</p>
 
+---
 
+## 📖 Overview
 
+**SERO (Smart Emergency Response Orchestrator)** is an AI-assisted emergency response platform designed to reduce emergency response time through intelligent coordination between multiple stakeholders.
 
+Instead of treating citizens, ambulance services, hospitals, and traffic management as separate systems, SERO orchestrates them into a **single real-time emergency workflow**, ensuring faster medical assistance and improved patient outcomes.
 
-One SOS. One Intelligent Dispatch. Zero Delays.
-🚀 Built with Flutter • Firebase • Google Maps • AI
-</div>
-📖 Table of Contents
-About
+With just **one SOS button**, the platform automatically initiates a coordinated emergency response—from ambulance dispatch to hospital notification and live tracking.
 
-Features
+---
 
-Smart Dispatch Workflow
+# 🎯 Problem Statement
 
-Screens
+Medical emergencies often suffer because emergency services operate independently.
 
-Architecture
+Typical delays include:
 
-Tech Stack
+- Delayed ambulance allocation
+- Lack of communication with hospitals
+- Traffic congestion
+- Manual coordination between multiple authorities
+- Poor visibility of emergency progress
 
-Project Structure
+In critical situations, even a few minutes can determine patient survival.
 
-Installation
+---
 
-Future Scope
+# 💡 Solution
 
-Team
+SERO transforms a simple emergency request into an intelligent, automated emergency response.
 
-License
+Once the user presses **SOS**, the system automatically:
 
-📌 About SERO
-SERO (Smart Emergency Response Orchestrator) is an AI-powered emergency response platform designed to drastically reduce emergency response time through intelligent coordination.
+- 📍 Detects the user's live GPS location
+- 🚑 Identifies the nearest available ambulance
+- 🧠 Estimates emergency severity (AI-ready architecture)
+- 🏥 Notifies the destination hospital
+- 🚦 Alerts traffic controllers for faster clearance
+- 📲 Provides live ETA updates to the citizen
+- 👨‍👩‍👧 Notifies emergency contacts
+- 📡 Tracks the ambulance until hospital arrival
 
-Instead of treating an emergency as a single SOS request, SERO orchestrates communication between Citizens, Ambulance Drivers, Traffic Controllers, Hospitals, and Administrators within one connected ecosystem.
+> **One SOS. One Coordinated Response. Zero Delays.**
 
-The objective is simple:
+---
 
-Reduce response time. Save lives.
+# ✨ Key Features
 
-🏆 Built at HCF Hackathon 2026
-SERO was conceptualized and developed during the HCF Hackathon – Mark 1 (2026) by Team Neurova.
+## 👤 Citizen Module
 
-The project was built around the vision of using AI and real-time technologies to improve emergency healthcare response through intelligent automation.
+- Secure Authentication
+- Smart SOS Activation
+- Emergency Type Selection
+- Live GPS Detection
+- Reverse Geocoding
+- Medical Profile Management
+- AI Severity Prediction *(Architecture Ready)*
+- Live Ambulance Tracking
+- Assigned Hospital Details
+- Real-Time ETA Updates
+- Emergency Contact Notifications
 
-Although created during a hackathon, SERO has been designed with scalability and real-world deployment in mind.
+---
 
-🎯 Problem
-Traditional emergency response systems face several challenges:
+## 🚑 Ambulance Driver Module
 
-Delayed ambulance dispatch
+- Real-Time Emergency Requests
+- Assigned Patient Information
+- Navigation Support
+- Live Status Updates
+- Mission Completion Workflow
 
-Poor coordination between stakeholders
+---
 
-No centralized emergency workflow
+## 🚦 Traffic Controller Module
 
-Lack of real-time updates
+- Active Emergency Dashboard
+- Ambulance Route Monitoring
+- Emergency Corridor Support
+- Incident Monitoring
+- Traffic Clearance Coordination
 
-Manual communication between departments
+---
 
-During emergencies, every second matters.
+## 🛠️ Admin Module
 
-💡 Solution
-SERO transforms a single SOS press into a complete emergency response workflow.
+- User Management
+- Driver Management
+- Emergency Monitoring
+- Analytics Dashboard
+- System Overview
+- Platform Insights
 
+---
+
+# 🧠 Intelligent Emergency Workflow
+
+```text
 Citizen Presses SOS
-        │
-        ▼
-Live GPS Location
-        │
-        ▼
-AI Severity Analysis
-        │
-        ▼
-Nearest Ambulance Assigned
-        │
- ┌──────┼─────────────┐
- ▼      ▼             ▼
-Driver Traffic     Hospital
-Alert  Controller   Alert
-        │
-        ▼
+          │
+          ▼
+Detect Live GPS Location
+          │
+          ▼
+Estimate Emergency Severity
+          │
+          ▼
+Locate Nearest Ambulance
+          │
+ ┌────────┼─────────────┐
+ ▼        ▼             ▼
+Driver   Traffic      Hospital
+Alert    Alert        Alert
+          │
+          ▼
 Citizen Receives Live ETA
-        │
-        ▼
-Live Tracking
-        │
-        ▼
-Patient Reaches Hospital
-✨ Key Features
-👤 Citizen
-Secure Authentication
+          │
+          ▼
+Real-Time Ambulance Tracking
+          │
+          ▼
+Patient Safely Reaches Hospital
+```
 
-Smart SOS Button
+---
 
-AI Severity Prediction
+# 🏗️ System Architecture
 
-Emergency Type Selection
+```text
+                    Citizen Application
+                           │
+                           ▼
+                Firebase Authentication
+                           │
+                           ▼
+                 Cloud Firestore Database
+                           │
+      ┌────────────────────┼────────────────────┐
+      ▼                    ▼                    ▼
+Driver Dashboard   Traffic Controller     Admin Panel
+      │                    │                    │
+      └────────────────────┴────────────────────┘
+                           │
+                           ▼
+                 Google Maps Platform
+                           │
+                           ▼
+              Real-Time Emergency Tracking
+```
 
-Medical Profile
+---
 
-Live GPS Tracking
+# 📱 Application Modules
 
-Live Ambulance Tracking
+### Citizen
 
-ETA Updates
+- Login & Registration
+- Dashboard
+- Emergency Type Selection
+- Medical Profile
+- AI Emergency Assessment
+- Live Ambulance Tracking
 
-Emergency Contact Notification
+### Ambulance Driver
 
-🚑 Ambulance Driver
-Live Emergency Alerts
+- Emergency Dashboard
+- Mission Details
+- Navigation
+- Status Updates
 
-Assigned Mission Dashboard
+### Traffic Controller
 
-Patient Information
+- Emergency Monitoring
+- Ambulance Tracking
+- Route Clearance
 
-Navigation
+### Administrator
 
-Status Updates
+- User Management
+- Driver Management
+- Emergency Analytics
+- Platform Monitoring
 
-Mission Completion
+---
 
-🚦 Traffic Controller
-Emergency Dashboard
+# 🛠️ Technology Stack
 
-Ambulance Monitoring
+## Mobile Development
 
-Route Clearance
+- Flutter
+- Dart
+- Material Design
 
-Live Incident Tracking
+## Backend
 
-🛠 Admin
-User Management
+- Firebase Authentication
+- Cloud Firestore
+- Firebase Storage
 
-Driver Management
+## Maps & Location
 
-Emergency Monitoring
+- Google Maps Flutter
+- Geolocator
+- Geocoding
 
-Analytics Dashboard
+## State Management
 
-🧠 Smart Emergency Dispatch Engine
-Unlike conventional emergency applications,
+- Provider
+- Stateful Widgets
 
-SERO automatically
+---
 
-Detects GPS Location
+# 🔥 Firebase Services
 
-Predicts Emergency Severity
+- Firebase Authentication
+- Cloud Firestore
+- Firebase Storage
 
-Finds Nearest Ambulance
+### Planned
 
-Notifies Driver
+- Firebase Cloud Messaging
+- Firebase Analytics
 
-Alerts Traffic Controller
+---
 
-Notifies Hospital
+# 📂 Project Structure
 
-Shares ETA
-
-Tracks Ambulance Live
-
-Updates Emergency Contacts
-
-No manual coordination required.
-
-🏗 Architecture
-                Citizen App
-                     │
-                     ▼
-          Firebase Authentication
-                     │
-                     ▼
-            Cloud Firestore Database
-                     │
-      ┌──────────────┼──────────────┐
-      ▼              ▼              ▼
- Driver App   Traffic Controller   Admin
-      │              │              │
-      └──────────────┼──────────────┘
-                     ▼
-             Google Maps Platform
-                     ▼
-          Real-Time Emergency Tracking
-🛠 Tech Stack
-Category	Technologies
-Mobile	Flutter, Dart
-Backend	Firebase Authentication, Cloud Firestore
-Maps	Google Maps API
-Location	Geolocator, Geocoding
-Database	Firebase Firestore
-State Management	Provider / Stateful Widgets
-📂 Project Structure
-lib
+```text
+lib/
 │
-├── core
-├── models
-├── screens
-│   ├── auth
-│   ├── citizen
-│   ├── driver
-│   ├── traffic_controller
-│   └── admin
+├── core/
+│   ├── constants.dart
+│   └── themes.dart
 │
-├── services
-├── widgets
+├── models/
+│
+├── screens/
+│   ├── auth/
+│   ├── citizen/
+│   ├── driver/
+│   ├── traffic_controller/
+│   └── admin/
+│
+├── services/
+│   ├── auth_service.dart
+│   ├── firestore_service.dart
+│   └── location_service.dart
+│
+├── widgets/
+│
 └── main.dart
-🚀 Getting Started
+```
+
+---
+
+# 📊 Firestore Collections
+
+```text
+users/
+
+drivers/
+
+traffic_controllers/
+
+emergencies/
+
+emergency_alerts/
+```
+
+---
+
+# 🚀 Getting Started
+
+## 1. Clone the Repository
+
+```bash
 git clone https://github.com/Giriran25/emergency_app.git
+```
 
+---
+
+## 2. Navigate to the Project
+
+```bash
 cd emergency_app
+```
 
+---
+
+## 3. Install Dependencies
+
+```bash
 flutter pub get
+```
 
+---
+
+## 4. Configure Firebase
+
+Place the Firebase configuration files in their respective directories.
+
+### Android
+
+```
+android/app/google-services.json
+```
+
+### iOS
+
+```
+ios/Runner/GoogleService-Info.plist
+```
+
+---
+
+## 5. Configure Google Maps API
+
+Add your API key inside:
+
+```
+android/app/src/main/AndroidManifest.xml
+```
+
+```xml
+<meta-data
+    android:name="com.google.android.geo.API_KEY"
+    android:value="YOUR_API_KEY"/>
+```
+
+---
+
+## 6. Run the Application
+
+```bash
 flutter run
-Configure:
+```
 
-Firebase
+---
 
-Google Maps API
+# 🚀 Future Roadmap
 
-Android/iOS platform files
+- 🤖 AI-Based Emergency Severity Prediction
+- 🚑 Intelligent Ambulance Allocation
+- 📲 Push Notifications
+- 🚦 Smart Traffic Signal Integration
+- 🏥 Live Hospital Bed Availability
+- 🎙️ Voice Activated SOS
+- 📡 Offline Emergency Mode
+- ⌚ Wearable Device Integration
+- 👨‍👩‍👧 Automatic Emergency Contact Alerts
+- 📈 Predictive Emergency Analytics
+- 🛰️ Government Emergency Service Integration
 
-📅 Roadmap
-AI-based Emergency Severity Prediction
+---
 
-Smart Ambulance Allocation
+# 🏆 Hackathon
 
-Firebase Cloud Messaging
+SERO was developed during the **HCF Hackathon – Mark 1**, held on **12 February 2026** at **Dayananda Sagar University**.
 
-Hospital Bed Availability
+The event was organized in collaboration with:
 
-Voice Activated SOS
+- Humans Care Foundation (HCF)
+- IEEE Computational Intelligence Society Student Branch, DSU
+- IEEE Robotics & Automation Society Student Branch, DSU
 
-Traffic Signal Integration
+Although initially built within a hackathon, the platform has been architected with scalability and real-world deployment in mind.
 
-Wearable Device Support
+---
 
-Offline Emergency Mode
+# 🤝 Contributing
 
-👨‍💻 Team Neurova
-<table> <tr align="center"> <td>
-Ranjith Kumar G
-Project Lead & Developer
+Contributions are welcome!
 
-</td> <td>
-N. Vikas
-Flutter Developer
+1. Fork the repository
 
-</td> <td>
-Manish
-Developer
+2. Create a feature branch
 
-</td> <td>
-Kishore B
-Developer
+```bash
+git checkout -b feature/awesome-feature
+```
 
-</td> </tr> </table>
-❤️ Vision
-Building a future where technology reduces emergency response time, improves coordination, and ultimately saves lives.
+3. Commit your changes
 
-📄 License
-Licensed under the MIT License.
+```bash
+git commit -m "Add awesome feature"
+```
 
-<div align="center">
-🚑 SERO
-Smart Emergency Response Orchestrator
-Built with ❤️ by Team Neurova
+4. Push to your branch
 
-One SOS. One Intelligent Dispatch. Zero Delays.
-⭐ If you like this project, consider giving it a star!
+```bash
+git push origin feature/awesome-feature
+```
 
-</div>
+5. Open a Pull Request
+
+---
+
+# 👥 Team Neurova
+
+Developed with passion during **HCF Hackathon – Mark 1**
+
+### Team Members
+
+- **Ranjith Kumar G**
+- **N. Vikas**
+- **Manish**
+- **Kishore B**
+
+Together, Team Neurova envisioned SERO as an intelligent emergency response ecosystem capable of reducing emergency response time through AI, real-time communication, and seamless coordination.
+
+---
+
+# 🌍 Vision
+
+To build a smarter emergency healthcare ecosystem where technology enables faster decisions, stronger coordination, and quicker medical assistance—helping save lives when every second matters.
+
+---
+
+# 📄 License
+
+This project is licensed under the **MIT License**.
+
+See the **LICENSE** file for more information.
+
+---
+
+<p align="center">
+
+# 🚑 SERO
+
+### Smart Emergency Response Orchestrator
+
+**Building the future of intelligent emergency response through AI, real-time communication, and seamless coordination.**
+
+**One SOS. One Coordinated Response. Zero Delays.**
+
+Made with ❤️ by **Team Neurova**
+
+</p>
